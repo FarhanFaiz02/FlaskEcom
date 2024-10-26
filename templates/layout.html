@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}  {{ title }} - My Store {% endif %}
+{% endblock %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ url_for('index') }}">My Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <!-- Add other nav items here -->
+        </ul>
+    </div>
+</nav>
+
+<!-- Main content block -->
+<div class="container my-4">
+    <h1>OK</h1>
+    {% block content %}
+    <!-- Content specific to the page will go here -->
+    {% endblock %}
+</div>
